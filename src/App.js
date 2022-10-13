@@ -12,6 +12,7 @@ function App() {
     <Routing/>
     <Footer/>
     </Router>
+ 
   );
   
 }

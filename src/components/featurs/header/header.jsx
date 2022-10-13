@@ -8,9 +8,9 @@ const navPages=["Logsign","Myprofile","Channels","Topchart", "Addchannel", "Cont
 function Header() {
   return (
     <div className="header">
-      <Link to={"/"}>Home</Link>
+      <Link to={"/"}><button>Home</button></Link>
       {
-          navPages.map(page=> {<Link to={page}>{page}</Link>})
+          navPages.map(page=> <Link to={page}><button>{page}</button></Link>)
       }
 
     </div>

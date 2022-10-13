@@ -1,4 +1,4 @@
-import "./add-channel.css";
+import "./addchannel.css";
 import React from "react";
 
 function Addchannel() {

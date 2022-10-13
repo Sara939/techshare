@@ -1,4 +1,4 @@
-import "./top-chart.css";
+import "./topchart.css";
 import React from "react";
 
 function Topchart() {

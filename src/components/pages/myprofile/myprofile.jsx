@@ -1,4 +1,4 @@
-import "./my-profile.css";
+import "./myprofile.css";
 import React from "react";
 
 function Myprofile() {

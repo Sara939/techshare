@@ -1,9 +1,9 @@
-import "./log-sign.css";
+import "./logsign.css";
 import React from "react";
 
 function Logsign() {
   return (
-    <div className="log-sign">
+    <div className="logsign">
       <h1>log-sign</h1>
     </div>
   );
