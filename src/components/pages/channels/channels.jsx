@@ -11,7 +11,7 @@ import { Stack } from "react-bootstrap";
 function Channels() {
   return (
  
-    <Stack direction="horizontal" gap={3}>
+    <Stack direction="horizontal" gap={5}>
       <div>
       <BasicVideo videoname="https://www.youtube.com/embed/j942wKiXFu8"/>
       <CardGuide title="The Net Ninja " text="Black-belt your web development skills. Over 1000 free programming tutorials about:

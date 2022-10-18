@@ -2,7 +2,7 @@ import Ratio from 'react-bootstrap/Ratio';
 
 function BasicVideo(props) {
     return (
-      <div style={{ width: '18rem', height: 'auto' }}>
+      <div style={{ width: '20rem', height: 'auto' }}>
         <Ratio aspectRatio="16x9">
           <embed type="image/svg+xml" src={props.videoname} />
         </Ratio>
