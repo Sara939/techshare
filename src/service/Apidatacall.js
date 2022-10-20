@@ -1,36 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react"
 import BasicVideo from "../components/featurs/CardGuide/BasicVideo";
 import CardGuide from "../components/featurs/CardGuide/CardGuide";
+import { Stack } from "react-bootstrap";
 
 
 function Apidatacall(){
-    const [channelapi, setChannelapi]= useState([]);
-        const getChannelapi = async ()=> {
-            const response= await fetch("https://my-json-server.typicode.com/sara-likaount/apidata/db")
-            // .then(response.jso)
-            const myjson= await response.json()
-            setChannelapi(myjson.api)
 
-        }
+    const [api, setApi] = useState([])
 
-    if(api.length <= 0){
-        return(
-        <>
-        <h1>no data</h1>
-        <button onClick={getChannelapi}> get data</button>
-        </>
-        )
+    const getData = async () => {
+        const response = await fetch("https://my-json-server.typicode.com/sara-likaount/apidata/db")
+        const json = await response.json()
+        setApi(json.api)
     }
 
-    return( <>
+    useEffect(() => {
+        getData()
+    }, [])
 
+    if (api.length <= 0){
+        return <h1>There is No Videos to Show</h1>
+     
+    }
+
+    return <div className="data">
+        <Stack direction="horizontal" gap={5}>
         {api.map((item) => {
-
-            return (<><BasicVideo videoname= {item.videoname}/>
-            <CardGuide title= {item.title} text={item.text}/></>)
+            return <div>
+               <BasicVideo videoname= {item.videoname}/>
+                <CardGuide title= {item.title} text={item.text}/>  
+            </div>
         })}
-
-        </>
-    )
+        </Stack>
+    </div>
 }
+
 export default Apidatacall; 

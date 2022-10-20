@@ -30,13 +30,13 @@ function Navheader() {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="/">HOME</Nav.Link>
                   <Nav.Link href="/Channels">CHANNELS</Nav.Link>
-                  <Nav.Link href="/Top Chart">TOP CHART</Nav.Link>
-                  <Nav.Link href="/Add Channel">ADD CHANNEL</Nav.Link>
+                  <Nav.Link href="/TopChart">TOP CHART</Nav.Link>
+                  <Nav.Link href="/AddChannel">ADD CHANNEL</Nav.Link>
                   <NavDropdown
                     title="CART"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="/My Profile">MY PROFILE</NavDropdown.Item>
+                    <NavDropdown.Item href="MyProfile">MY PROFILE</NavDropdown.Item>
                     <NavDropdown.Item href="Login">
                       LOGIN
                     </NavDropdown.Item>
