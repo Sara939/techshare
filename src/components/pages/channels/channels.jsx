@@ -16,7 +16,7 @@ function Channels() {
     
  
     <Stack direction="horizontal" gap={5}>
-
+    <h1>Recomended by admin</h1>
       <div>
       <BasicVideo videoname="https://www.youtube.com/embed/j942wKiXFu8"/>
       <CardGuide title="The Net Ninja " text="Black-belt your web development skills. Over 1000 free programming tutorials about:
@@ -32,11 +32,11 @@ function Channels() {
       <CardGuide title="Traversy Media " text="Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP"/>
       </div>
       </Stack>
-
+    <h1>Users Recomndation</h1>
       <Stack direction="horizontal" gap={5}>
         <Apidatacall/>
       </Stack>
-\
+
  
     </>
 

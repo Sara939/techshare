@@ -31,12 +31,12 @@ function Navheader() {
                   <Nav.Link href="/">HOME</Nav.Link>
                   <Nav.Link href="/Channels">CHANNELS</Nav.Link>
                   <Nav.Link href="/TopChart">TOP CHART</Nav.Link>
-                  <Nav.Link href="/AddChannel">ADD CHANNEL</Nav.Link>
+                  <Nav.Link href="/Addchannel">ADD CHANNEL</Nav.Link>
                   <NavDropdown
                     title="CART"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="MyProfile">MY PROFILE</NavDropdown.Item>
+                    <NavDropdown.Item href="/Myprofile">MY PROFILE</NavDropdown.Item>
                     <NavDropdown.Item href="Login">
                       LOGIN
                     </NavDropdown.Item>

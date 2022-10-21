@@ -9,9 +9,10 @@ function Apidatacall(){
     const [api, setApi] = useState([])
 
     const getData = async () => {
-        const response = await fetch("https://my-json-server.typicode.com/sara-likaount/apidata/db")
+        const response = await fetch("http://localhost:3001/Api")
         const json = await response.json()
-        setApi(json.api)
+        setApi(json)
+        console.log(json);
     }
 
     useEffect(() => {
@@ -36,3 +37,4 @@ function Apidatacall(){
 }
 
 export default Apidatacall; 
+// json-server db.json -p 3001
