@@ -9,6 +9,7 @@ function Apidatacall(){
     const [api, setApi] = useState([])
 
     const getData = async () => {
+        
         const response = await fetch("http://localhost:3001/Api")
         const json = await response.json()
         setApi(json)
@@ -29,7 +30,7 @@ function Apidatacall(){
         {api.map((item) => {
             return <div>
                <BasicVideo videoname= {item.videoname}/>
-                <CardGuide title= {item.title} text={item.text}/>  
+                <CardGuide title= {item.title} text={item.text} id={item.id}/>
             </div>
         })}
         </Stack>

@@ -11,7 +11,7 @@ function CardGuide(props){
           <Card.Text>
           {props.text}
           </Card.Text>
-          <Button variant="primary">TO More Info</Button>
+          <Button variant="primary"><h1>{props.id} </h1></Button>
         </Card.Body>
       </Card>
     )

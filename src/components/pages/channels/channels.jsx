@@ -4,6 +4,7 @@ import CardGuide from "../../featurs/CardGuide/CardGuide";
 import BasicVideo from "../../featurs/CardGuide/BasicVideo";
 import { Stack } from "react-bootstrap";
 import Apidatacall from "../../../service/Apidatacall";
+import Deletbutton from "../../featurs/Deletbutton/Deletbutton";
 
 
 
@@ -25,7 +26,7 @@ function Channels() {
       <div>
       <BasicVideo videoname="https://www.youtube.com/embed/rK_pzZTnb-I"/>
       <CardGuide title="עופר שלי, מאנקיס" text="בערוץ תמצאו מידע והסבר על השפות /ספריות הבאות
-        REACT JS, NODEJS , HTML 5 , CSS 3 ,BOOTSTRAP , WORDPRESS ..."/>
+        REACT JS, NODEJS , HTML 5 , CSS 3 ,BOOTSTRAP , WORDPRESS ..." />
       </div>
       <div>
       <BasicVideo videoname="https://www.youtube.com/embed/w7ejDZ8SWv8"/>
@@ -35,6 +36,7 @@ function Channels() {
     <h1>Users Recomndation</h1>
       <Stack direction="horizontal" gap={5}>
         <Apidatacall/>
+        <Deletbutton/>
       </Stack>
 
  

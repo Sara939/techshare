@@ -11,7 +11,7 @@ function Addchannel() {
   
   
     const postData = async (e) => {
-      const video= {title, text, videoname};
+      // const video= {title, text, videoname};
   
       e.preventDefault();
       try{
