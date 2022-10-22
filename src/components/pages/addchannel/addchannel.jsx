@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {Link} from "react-router-dom";
 
-
+// json-server db.json -p 3001 --- server start commend
 
 function Addchannel() {
   const [title, setTitle]= useState("");
@@ -39,20 +39,20 @@ function Addchannel() {
     }
 
       return(
-        <form onSubmit={postData}> 
+        <form onSubmit={postData} className="add"> 
 
           <Form.Group className="mb-5" controlId="formBasicEmail">
-            <Form.Label>Video Title</Form.Label>
+            <Form.Label className="addlabel">Video Title</Form.Label>
             <Form.Control placeholder="Enter Video Title" type="text" required  value={title} onChange={e => setTitle(e.target.value)}/>       
           </Form.Group>
 
           <Form.Group className="mb-5" controlId="formBasicEmail">
-            <Form.Label>Video Description</Form.Label>
+            <Form.Label className="addlabel">Video Description</Form.Label>
             <Form.Control placeholder="Enter Video Description" type="text" required  value={text} onChange={e => setText(e.target.value)}/>       
           </Form.Group>
 
           <Form.Group className="mb-5" controlId="formBasicEmail">
-            <Form.Label>Video Url</Form.Label>
+            <Form.Label className="addlabel">Video Url</Form.Label>
             <Form.Control placeholder="Enter Video Url" type="text" required  value={videoname} onChange={e => setVideoname(e.target.value)}/>       
           </Form.Group>
           <Form.Group className="mb-5" controlId="formBasicCheckbox">

@@ -31,7 +31,7 @@ function Navheader() {
                   <Nav.Link href="/">HOME</Nav.Link>
                   <Nav.Link href="/Aboutus">ABOUT US</Nav.Link>
                   <Nav.Link href="/Channels">CHANNELS</Nav.Link>
-                  <Nav.Link href="/TopChart">TOP CHART</Nav.Link>
+                  <Nav.Link href="/TopChart">INFO TABLE</Nav.Link>
                   <Nav.Link href="/Addchannel">ADD CHANNEL</Nav.Link>
                   <NavDropdown
                     title="CART"

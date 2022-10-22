@@ -1,0 +1,9 @@
+.add {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .addlabel {
+    text-align: left;
+    display: block;
+  }

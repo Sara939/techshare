@@ -1,4 +1,4 @@
-import "./Contactform.css";
+import "./Conectform.css";
 import React, { useState } from "react";
 
 
@@ -23,9 +23,10 @@ const Conectform = () => {
     <form
       onSubmit={handleSubmit}
       // method="POST"
-      target="mailto:someone@example.com"
-    >
-      <div className="mb-3 pt-0">
+      target="_blank"
+      className="conect"
+    ><h2>CONECT US</h2>
+      <div className="mb-3 pt-0 ">
         <input
           type="text"
           placeholder="Your name"
@@ -53,7 +54,7 @@ const Conectform = () => {
       </div>
       <div className="mb-3 pt-0">
         <button
-          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="bg-blue-500 active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="submit"
         >
           Send a message
