@@ -6,7 +6,7 @@ import Logo from "../Logo/Logo";
 
 
 
-const navPages=["MyProfile","Channels","Top Chart", "Add Channel", "Contact"]; 
+const navPages=["MyProfile","Channels","Top Chart", "Add Channel", "Aboutus"]; 
 
 function Header() {
   return (

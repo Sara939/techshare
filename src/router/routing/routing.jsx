@@ -6,7 +6,7 @@ import Myprofile from "../../components/pages/myprofile/myprofile";
 import Channels from "../../components/pages/channels/channels";
 import Topchart from "../../components/pages/topchart/top-chart";
 import Addchannel from "../../components/pages/addchannel/addchannel";
-import Contact from "../../components/pages/contact/contact";
+import Aboutus from "../../components/pages/aboutus/aboutus";
 
 
 function Routing() {
@@ -18,7 +18,7 @@ function Routing() {
             <Route path="/Channels" element={<Channels/>}/>
             <Route path="/Topchart" element={<Topchart/>}/>
             <Route path="/Addchannel" element={<Addchannel/>}/> 
-            <Route path="/Contact" element={<Contact/>}/> 
+            <Route path="/Aboutus" element={<Aboutus/>}/> 
         </Routes>
 
 

@@ -13,7 +13,6 @@ function Apidatacall(){
         const response = await fetch("http://localhost:3001/Api")
         const json = await response.json()
         setApi(json)
-        console.log(json);
     }
 
     useEffect(() => {

@@ -2,28 +2,44 @@ import "./topchart.css";
 import React from "react";
 import Table from 'react-bootstrap/Table';
 import getData from "../../../service/Apidatacall"
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function Topchart() {
-  // const [api, setApi] = useState()
-
-
+function Topchart() { 
   
-  
+  const [loadingapi, setLoadingapi] = useState(true);
+
+  const [api, setApi] = useState([]);
+
+  const getData = async () => {
+        
+    const response = await fetch("http://localhost:3001/Api")
+    const json = await response.json()
+    setApi(json)
+    setLoadingapi(false)  
+}
+
+   useEffect(() => {
+        getData()
+        
+    }, [])
+
   return (
-    
-      getData()
-      .then((api)=>{
+  <>
+     
+      { loadingapi ? (<p>Loading Please wait...</p> ) : (
       <Table striped bordered hover variant="dark">
-        <thead><tr>Id</tr><tr>Channal Title</tr><tr>Channal Description</tr></thead>
-        <tbody>
-          <tr><td>{api.id}</td><td>{api.title}</td><td>{api.text}</td></tr>
-          </tbody>
-      </Table>}
-      ))
+          <thead><tr><th>ID</th><th>CHANNEL TITLE</th><th>CHANNEL DESCRIPTION</th></tr></thead>
+          <tbody>
+          {api.map((item) => {
+            return <tr>
+              <td>{item.id}</td><td>{item.title}</td><td>{item.text}</td>
+            </tr>
+          })}
+            </tbody>
+      </Table>
+            )
+            }
+    </>)
+ }       
 
-
-
-      }        
 export default Topchart;
-
