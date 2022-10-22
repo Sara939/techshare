@@ -1,0 +1,31 @@
+.home{
+
+    height: 100vh;
+    margin: auto;
+
+}
+.headline{
+    font-size: 5vw;
+    color: #271786;
+
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh;
+}
+
+.headandtext{
+    background-color: #f1f1f1 ;
+    
+
+}
+
+.text{
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh;
+}
+
+.mb-2{
+    text-align: center;
+}

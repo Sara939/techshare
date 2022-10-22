@@ -25,7 +25,7 @@ const Conectform = () => {
       // method="POST"
       target="_blank"
       className="conect"
-    ><h2>CONECT US</h2>
+    ><h1>CONECT US</h1>
       <div className="mb-3 pt-0 ">
         <input
           type="text"

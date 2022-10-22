@@ -1,20 +1,25 @@
 import "./aboutus.css";
 import React from "react";
 import Conectform from "../../featurs/Conectform/Conectform";
+import Imges from "../../featurs/imges/imges";
 
 
 function Aboutus() {
   return (
-    <div className="aboutus"> 
+    <div className="aboutuscontect"> 
 
-      <div>
-        <h2>ABOUT US</h2>
+      <div className="aboutus">
+        
+        <h1>ABOUT US</h1>
         <h3>TechShare is a platform for sharing guides<br/>
          and YouTube channels that helps you study,<br/>
-          and receive the same.
-          <h2>sharing is caring</h2> 
-          have fun. </h3>
+          and receive the same.</h3>
+          <h4 className="geenlargetext">sharing is caring</h4> 
+          <h3>have fun.</h3> 
+        
       </div>
+
+      <Imges url={"tablestudy.jpeg"} height={450} width={400}/>
       <Conectform/>
 
     </div>

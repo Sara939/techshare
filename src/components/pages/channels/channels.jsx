@@ -30,6 +30,7 @@ function Channels() {
       </div>
       <div>
       <BasicVideo videoname="https://www.youtube.com/embed/w7ejDZ8SWv8"/>
+      {/* https://st.depositphotos.com/1034557/3837/v/600/depositphotos_38371903-stock-video-learn-word-sphere.mp4 */}
       <CardGuide title="Traversy Media " text="Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP"/>
       </div>
       </Stack>

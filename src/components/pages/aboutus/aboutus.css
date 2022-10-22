@@ -1,6 +1,42 @@
 .aboutus {
-    /* max-width: 400px; */
+    max-width: 400px;
     margin: 0 auto;
     text-align: left;
+  }
+
+  .conect {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh;
     
   }
+  h1 {
+  
+    color: #271786;
+    margin-bottom: 30px;
+  }
+
+  .aboutuscontect {
+    display: flex;
+    background-image: ;
+    
+  }
+
+  .geenlargetext {
+    font-size: 2.3vw;
+    color: #556058;
+  }
+
+  @media (max-width: 753px){
+    .aboutuscontect {
+      display: block;
+      margin: 10%;
+    }
+    .imges{
+      width: 80vw;
+      height: 50vh;
+
+    }
+  }
+  

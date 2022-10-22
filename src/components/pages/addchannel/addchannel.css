@@ -1,9 +1,27 @@
 .add {
-    max-width: 400px;
+    max-width: 40vw;
+    /* max-height: 80vh; */
     margin: 0 auto;
     text-align: center;
-  }
+    border: solid black 2px ;
+    border-radius: 1%;
+    padding: 5vh;
+    /* background-color: rgba(0, 255, 38, 0.089); */
+}
   .addlabel {
     text-align: left;
     display: block;
+    font-size: 2vw;
+  }
+  .btnaddform{
+    background-color: #271786;
+    width: 20vw;
+
+  }
+
+  @media (max-width: 753px){
+    .add {
+      max-width: none;
+      
+    }
   }

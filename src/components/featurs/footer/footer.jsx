@@ -11,41 +11,40 @@ export  const Footer = () => {
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
               <Logo size="100px"/>
-              <span className="ml-3 h5 font-weight-bold"> Devwares</span>
+              {/* <span className="ml-3 h5 font-weight-bold"> TechShare</span> */}
             </a>
             <p className="my-3" style={{ width: '250px' }}>
-              We are creating High Quality Resources and tools to Aid developers during the
-              developement of their projects
+            We are creating a collaborative system in order to share knowledge about training techniques, videos, guides and encouragement
             </p>
             <CDBBox display="flex" className="mt-4">
               <CDBBtn flat color="dark">
-                <CDBIcon fab icon="facebook-f" />
+                <CDBIcon fab icon="facebook-f" href="https://he-il.facebook.com/"/>
               </CDBBtn>
-              <CDBBtn flat color="dark" className="mx-3">
-                <CDBIcon fab icon="linkdIn" />
+              <CDBBtn flat color="dark" className="mx-3" href="https://www.linkedin.com/in/sara-likaount/">
+                <CDBIcon fab icon="linkedin-in" />
               </CDBBtn>
-              <CDBBtn flat color="dark" className="p-2">
-                <CDBIcon fab icon="instagram" />
+              <CDBBtn flat color="dark" className="p-2" href="https://github.com/sara-likaount">
+                <CDBIcon fab icon="github" />
               </CDBBtn>
             </CDBBox>
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Devwares
+              Information
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Resources</CDBFooterLink>
-              <CDBFooterLink href="/">About Us</CDBFooterLink>
-              <CDBFooterLink href="/">Contact</CDBFooterLink>
-              <CDBFooterLink href="/">Blog</CDBFooterLink>
-            </CDBBox>
-          </CDBBox>
-          <CDBBox>
-            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Help
-            </p>
-            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/AboutUs">About Us</CDBFooterLink>
+              <CDBFooterLink href="/AboutUs">Contact</CDBFooterLink>
+              <CDBFooterLink href="/Topchart">Info Table</CDBFooterLink>
               <CDBFooterLink href="/">Support</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+            Join Us
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Profile</CDBFooterLink>
               <CDBFooterLink href="/">Sign Up</CDBFooterLink>
               <CDBFooterLink href="/">Sign In</CDBFooterLink>
             </CDBBox>
@@ -55,13 +54,13 @@ export  const Footer = () => {
               Products
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Windframe</CDBFooterLink>
-              <CDBFooterLink href="/">Loop</CDBFooterLink>
-              <CDBFooterLink href="/">Contrast</CDBFooterLink>
+              <CDBFooterLink href="/">Add Channel</CDBFooterLink>
+              <CDBFooterLink href="/">Watch Channel</CDBFooterLink>
+              <CDBFooterLink href="/">Delet Channel</CDBFooterLink>
             </CDBBox>
           </CDBBox>
         </CDBBox>
-        <small className="text-center mt-5">&copy; Devwares, 2020. All rights reserved.</small>
+        <small className="text-center mt-5">&copy; SaraLikaout, 2022. All rights reserved.</small>
       </CDBBox>
     </CDBFooter>
   );
