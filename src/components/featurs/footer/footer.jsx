@@ -44,9 +44,9 @@ export  const Footer = () => {
             Join Us
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Profile</CDBFooterLink>
-              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
-              <CDBFooterLink href="/">Sign In</CDBFooterLink>
+              <CDBFooterLink href="/Profile">Profile</CDBFooterLink>
+              <CDBFooterLink >Sign Up</CDBFooterLink>
+              <CDBFooterLink >Sign In</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -54,9 +54,9 @@ export  const Footer = () => {
               Products
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Add Channel</CDBFooterLink>
-              <CDBFooterLink href="/">Watch Channel</CDBFooterLink>
-              <CDBFooterLink href="/">Delet Channel</CDBFooterLink>
+              <CDBFooterLink href="/Add channel">Add Channel</CDBFooterLink>
+              <CDBFooterLink href="/Channels">Watch Channel</CDBFooterLink>
+              <CDBFooterLink href="/Channels">Delet Channel</CDBFooterLink>
             </CDBBox>
           </CDBBox>
         </CDBBox>

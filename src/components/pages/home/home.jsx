@@ -22,13 +22,10 @@ function Home() {
       <Largebutton/>
       </div>
       <div>
-        <Imges url={"yougotthis.webp"} width={430} />
-        <Imges url={"computers.jpeg"} width={470} />
-        <Imges url={"home.avif"} width={500} />
+
       </div>
 
-     
-      
+    
     </div>
   );
 };

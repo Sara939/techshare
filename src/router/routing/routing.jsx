@@ -7,12 +7,14 @@ import Channels from "../../components/pages/channels/channels";
 import Topchart from "../../components/pages/topchart/top-chart";
 import Addchannel from "../../components/pages/addchannel/addchannel";
 import Aboutus from "../../components/pages/aboutus/aboutus";
+import Login from "../../components/pages/Containers/Login";
 
 
 function Routing() {
   return (
     
         <Routes>
+            <Route exact path="/login" element={<Login />}/>
             <Route path="/" element={<Home/>  }/>
             <Route path="/Myprofile" element={<Myprofile/>}/>
             <Route path="/Channels" element={<Channels/>}/>

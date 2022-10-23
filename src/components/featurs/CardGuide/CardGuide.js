@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Deletbutton from "../Deletbutton/Deletbutton"
 
 function CardGuide(props){
 
@@ -11,7 +12,7 @@ function CardGuide(props){
           <Card.Text>
           {props.text}
           </Card.Text>
-          <Button variant="primary"><h1>{props.id} </h1></Button>
+          <Button className='crdbtn'><h6>{props.id}{props.btn}</h6></Button>
         </Card.Body>
       </Card>
     )
