@@ -14,7 +14,6 @@ function Channels() {
   
   return (
     <>
-    <h1>Guides recommended by the Admin</h1>
     
  
     <Stack  direction="horizontal" gap={5}>
@@ -37,7 +36,6 @@ function Channels() {
       </div>
       </Stack>
 
-    <h1>User recommendations</h1>
       <Stack direction="horizontal" gap={5}>
         <Apidatacall/>
         <Deletbutton/>

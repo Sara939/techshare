@@ -12,9 +12,9 @@ function Navheader() {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-          <Container fluid>
-            <Navbar.Brand href="/"><Logo size="250px"/></Navbar.Brand>
+        <Navbar key={expand} expand={expand} >
+          <Container fix>
+            <Navbar.Brand href="/"><Logo size="130px"/></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -27,34 +27,35 @@ function Navheader() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/">HOME</Nav.Link>
-                  <Nav.Link href="/Aboutus">ABOUT US</Nav.Link>
-                  <Nav.Link href="/Channels">CHANNELS</Nav.Link>
-                  <Nav.Link href="/TopChart">INFO TABLE</Nav.Link>
-                  <Nav.Link href="/Addchannel">ADD CHANNEL</Nav.Link>
+                <Nav className="justify-content-end flex-grow-1 pe-3 ">
+                  <Nav.Link className="h5 mb-4" style={{ fontWeight: '600' , color: 'white'}} href="/">HOME</Nav.Link>
+                  <Nav.Link  className="h5 mb-4" style={{ fontWeight: '600' , color: 'white'}} href="/Aboutus">ABOUT US</Nav.Link>
+                  <Nav.Link className="h5 mb-4" style={{ fontWeight: '600' , color: 'white'}} href="/Channels">CHANNELS</Nav.Link>
+                  <Nav.Link className="h5 mb-4" style={{ fontWeight: '600' , color: 'white'}} href="/TopChart">INFO TABLE</Nav.Link>
+                  <Nav.Link className="h5 mb-4" style={{ fontWeight: '600' , color: 'white'}} href="/Addchannel">ADD CHANNEL</Nav.Link>
                   <NavDropdown
-                    title="CART"
+                    title="Users Info"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
+                    style={{ fontWeight: '600'}}
                   >
-                    <NavDropdown.Item href="/Myprofile">MY PROFILE</NavDropdown.Item>
-                    <NavDropdown.Item href="Login">
+                    <NavDropdown.Item style={{ fontWeight: '600'}} href="/Myprofile">PROFILE</NavDropdown.Item>
+                    <NavDropdown.Item style={{ fontWeight: '600'}}  href="/Login">
                       LOGIN
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item style={{ fontWeight: '600'}} href="/Signup">
                       SIGN UP
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Form className="d-flex">
-                  <Form.Control
+                  {/* <Form.Control
                     type="search"
                     placeholder="BY NAME OR SUBJECT"
                     className="me-2"
                     aria-label="Search"
-                  />
-                  <Button variant="outline-success">SEARCH  </Button>
+                  /> */}
+                  {/* <Button variant="outline-success">SEARCH  </Button> */}
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
