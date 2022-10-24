@@ -9,15 +9,13 @@ function Home() {
   return (
     <div >
 
-
+      <div>
+        <Imges url={"web-design-2906159_1280.jpg"} width={1260} height={420}/>
+      </div>
 
       <div className="headandtext">
-      <Headline/>
-      <Text/>
-
-      </div>
-      <div>
-
+        <Headline/>
+        <Text/>
       </div>
 
     

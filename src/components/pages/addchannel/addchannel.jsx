@@ -14,7 +14,6 @@ function Addchannel() {
   
   
     const postData = async (e) => {
-      // const video= {title, text, videoname};
   
       // e.preventDefault();
       try{
@@ -40,7 +39,7 @@ function Addchannel() {
 
       return(
         <form onSubmit={postData} className="add"> 
-        <h1>ADD YOUR BEST CHANNEL RECCOMNDATION</h1>
+        <h1 className="addlabel">ADD YOUR BEST CHANNEL RECCOMNDATION</h1>
 
           <Form.Group className="mb-4" >
             <Form.Label className="addlabel">Video Title</Form.Label>
@@ -56,13 +55,13 @@ function Addchannel() {
             <Form.Label className="addlabel">Video Url</Form.Label>
             <Form.Control placeholder="Enter Video Url" type="text" required  value={videoname} onChange={e => setVideoname(e.target.value)}/>       
           </Form.Group>
+          
           <Form.Group className="mb-4">
             <Form.Check type="checkbox" label="I Checked that Url link writen corectly" required/>
           </Form.Group>
 
-          <Button className="btnaddform" variant="primary" type="submit">
-            Submit
-          </Button>
+          <button className="btn grey lighten-1 z-depth-0" type="submit">Submit</button>
+            
       </form>
       )
       // if (res => 200) {

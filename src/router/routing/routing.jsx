@@ -7,8 +7,8 @@ import Channels from "../../components/pages/channels/channels";
 import Topchart from "../../components/pages/topchart/top-chart";
 import Addchannel from "../../components/pages/addchannel/addchannel";
 import Aboutus from "../../components/pages/aboutus/aboutus";
-import Login from "../../components/Auth/Login";
-import SignUp from "../../components/Auth/Signup";
+import Login from "../../components/featurs/Auth/Login";
+import SignUp from "../../components/featurs/Auth/Signup";
 
 
 function Routing() {
