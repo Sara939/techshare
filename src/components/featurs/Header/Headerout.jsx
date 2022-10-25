@@ -1,12 +1,14 @@
 import React from "react";
 
 function HeaderOut(){
+
+ 
     return(
         <div className="navbar-fixed">
             <ul id="dropdown1" className="dropdown-content navbar-fixed">
                 
                 {/* <li><a href="/Myprofile">Profile</a></li> */}
-                <li class="divider"></li>
+                {/* <li class="divider"></li> */}
                 
             </ul>
             <nav>

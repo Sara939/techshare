@@ -1,5 +1,7 @@
 import { Component } from "react";
 import React from "react";
+import {signInWithEmailAndPassword} from 'firebase/auth';
+import { auth } from "./Signup";
 
 class Login extends Component{
     state= {
@@ -16,7 +18,14 @@ class Login extends Component{
     }
     handleSubmit= (e)=>{
         e.preventDefault();
-        console.log(this.state);
+        signInWithEmailAndPassword(auth,this.state.email,this.state.password)
+        .then((cred) => {
+            console.log( "user logged in",cred.user);
+
+        })
+        .catch((err) =>{
+            console.log(err.message);
+        })  
     }
 
 

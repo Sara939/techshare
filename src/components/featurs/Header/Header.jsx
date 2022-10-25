@@ -1,7 +1,16 @@
 import React from "react";
+import {signOut} from 'firebase/auth';
+import { auth} from '../Auth/Signup'
 
 
 function Header(){
+
+    const handleClickOut= () => {
+        signOut(auth)
+        .then(() => {
+            console.log("the user sign out");
+        })
+    }
 
 
     return(
@@ -22,8 +31,7 @@ function Header(){
                     <li><a href="/Addchannel">Add Channel</a></li>
                     <li><a href="/Topchart">Info Table</a></li>
                     <li><a href="/Myprofile">Profile</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/">Sign Out</a></li>
+                    <li><a onClick={handleClickOut}>Sign Out</a></li>
                     
                     {/* <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">namelogo<i className="material-icons right">arrow_drop_down</i></a></li> */}
                     </ul>

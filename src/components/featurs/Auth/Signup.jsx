@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from "react";
 import { initializeApp} from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+import Header from "../Header/Header";
 
 
 const firebaseConfig = {
@@ -16,7 +17,7 @@ const firebaseConfig = {
    
   initializeApp(firebaseConfig);
 
-const auth= getAuth();
+export const auth= getAuth();
 
 class SignUp extends Component{
     state= {
@@ -33,7 +34,6 @@ class SignUp extends Component{
     }
     handleSubmit= (e)=>{
         e.preventDefault();
-        console.log(this.state);
         createUserWithEmailAndPassword(auth,this.state.email,this.state.password,this.state.firstName,this.state.lastName)
         .then((cred) => {
             console.log( "user created",cred.user);
