@@ -1,3 +1,3 @@
-export const SignIn= ()=>{
+export const SignIn = (credentials) => {
     
 }

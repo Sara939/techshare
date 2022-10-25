@@ -1,5 +1,22 @@
 import { Component } from "react";
 import React from "react";
+import { initializeApp} from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAnGpzWt4jVRDlhsGq_rzaS6Mq7_txJRT4",
+    authDomain: "techshare-2bcb6.firebaseapp.com",
+    projectId: "techshare-2bcb6",
+    storageBucket: "techshare-2bcb6.appspot.com",
+    messagingSenderId: "394302627029",
+    appId: "1:394302627029:web:7856330db73793c0bad65c",
+    measurementId: "G-HDBG84FGLL"
+  };
+   
+  initializeApp(firebaseConfig);
+
+const auth= getAuth();
 
 class SignUp extends Component{
     state= {
@@ -17,6 +34,14 @@ class SignUp extends Component{
     handleSubmit= (e)=>{
         e.preventDefault();
         console.log(this.state);
+        createUserWithEmailAndPassword(auth,this.state.email,this.state.password,this.state.firstName,this.state.lastName)
+        .then((cred) => {
+            console.log( "user created",cred.user);
+
+        })
+        .catch((err) =>{
+            console.log(err.message);
+        })  
     }
 
 
@@ -24,7 +49,7 @@ class SignUp extends Component{
         return(
             <div className="container">
                 
-                <form className="white" onSubmit={this.handleSubmit}>
+                <form className="white" id="signupform" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
