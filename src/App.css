@@ -1,0 +1,31 @@
+
+html{
+    min-height: 100%;
+}
+.wrapper {
+    padding: 20px;
+}
+
+
+nav ul a{
+    text-decoration: none;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #b5936684;
+}
+
+form{
+    padding: 20px;
+    margin: 2%;
+}
+form button, form h5{
+    margin: 2% 0;
+}
+/* nav{
+    background-color: #ced4da00;
+} */
