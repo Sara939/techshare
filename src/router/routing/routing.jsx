@@ -15,7 +15,7 @@ function Routing() {
   return (
     
         <Routes>
-          <Route path="/SignUp" element={<SignUp />}/>
+          <Route path="SignUp" element={<SignUp />}/>
             <Route path="/Login" element={<Login />}/>
             <Route path="/" element={<Home/>  }/>
             <Route path="/Myprofile" element={<Myprofile/>}/>
