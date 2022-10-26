@@ -1,0 +1,36 @@
+.aboutus {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .conect {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh;
+    
+  }
+  h1 {
+  
+    margin-bottom: 10%;
+  }
+
+  .aboutuscontect {
+    display: flex;
+    
+  }
+
+
+
+  @media (max-width: 753px){
+    .aboutuscontect {
+      display: block;
+      margin: 10%;
+    }
+    .imges{
+      width: 80vw;
+      height: 50vh;
+
+    }
+  }
+  

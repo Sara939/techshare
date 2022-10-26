@@ -1,0 +1,12 @@
+.crdbtn{
+    background-color: #271786;
+    height: 2rem;
+}
+
+
+@media (max-width: 753px){
+    .hstack {
+    display: block;
+    }
+  }
+  
