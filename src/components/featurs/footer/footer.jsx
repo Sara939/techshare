@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./Footer.css";
 import React from "react";
 import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 import Logo from "../Logo/Logo";
