@@ -1,40 +1,22 @@
-import { Component } from "react";
+import { useState } from "react";
 import React from "react";
-import { initializeApp} from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
-import Header from "../Header/Header";
+import {createUserWithEmailAndPassword} from 'firebase/auth';
+import { auth } from "../../../conrext/usercontext";
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAnGpzWt4jVRDlhsGq_rzaS6Mq7_txJRT4",
-    authDomain: "techshare-2bcb6.firebaseapp.com",
-    projectId: "techshare-2bcb6",
-    storageBucket: "techshare-2bcb6.appspot.com",
-    messagingSenderId: "394302627029",
-    appId: "1:394302627029:web:7856330db73793c0bad65c",
-    measurementId: "G-HDBG84FGLL"
-  };
-   
-  initializeApp(firebaseConfig);
+function SignUp(){
 
-export const auth= getAuth();
+    const [email, setEmail]= useState("");
+    const [password, setPassword]= useState("");
+    const [firstName, setFirstName]= useState("");
+    const [lastName, setLastName]= useState("");
+    const [picture, setPicture]= useState("");
 
-class SignUp extends Component{
-    state= {
-        email: '',
-        password:'',
-        firstName:'',
-        lastName: ''
-    }
-    handleChange= (e) =>{
-        this.setState({
-        [e.target.id] : e.target.value
 
-        })
-    }
-    handleSubmit= (e)=>{
+    const handleSubmit= (e)=>{
         e.preventDefault();
-        createUserWithEmailAndPassword(auth,this.state.email,this.state.password,this.state.firstName,this.state.lastName)
+        console.log(email,password,firstName,lastName,picture);
+        createUserWithEmailAndPassword(auth,email,password,firstName,lastName,picture)
         .then((cred) => {
             console.log( "user created",cred.user);
 
@@ -45,27 +27,30 @@ class SignUp extends Component{
     }
 
 
-    render(){
         return(
             <div className="container">
                 
-                <form className="white" id="signupform" onSubmit={this.handleSubmit}>
+                <form className="white" id="signupform" onSubmit={handleSubmit}>
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" onChange={this.handleChange}/>
+                        <input type="email" value={email} onChange={ e=>{setEmail(e.target.value)}}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={this.handleChange}/>
+                        <input type="password" value={password} onChange={e =>{setPassword(e.target.value)}}/>
                     </div> 
                     <div className="input-field">
                         <label htmlFor="firstName">First Name</label>
-                        <input type="text" id="firstName" onChange={this.handleChange}/>
+                        <input type="text" value={firstName} onChange={e =>{setFirstName(e.target.value)}}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="lastName">Last Name</label>
-                        <input type="text" id="lastName" onChange={this.handleChange}/>
+                        <input type="text" value={lastName} onChange={e =>{setLastName(e.target.value)}}/>
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="picture">Picture</label>
+                        <input type="text" value={picture} onChange={e =>{setPicture(e.target.value)}}/>
                     </div>
 
                     <div className="input-field">
@@ -76,9 +61,6 @@ class SignUp extends Component{
 
         )
 
-
-
-    }
 }
 
 export default SignUp; 

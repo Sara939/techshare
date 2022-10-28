@@ -11,11 +11,12 @@ import Login from "../../components/featurs/Auth/Login";
 import SignUp from "../../components/featurs/Auth/Signup";
 
 
+
 function Routing() {
   return (
-    
+
         <Routes>
-          <Route path="SignUp" element={<SignUp />}/>
+          <Route path="/SignUp" element={<SignUp />}/>
             <Route path="/Login" element={<Login />}/>
             <Route path="/" element={<Home/>  }/>
             <Route path="/Myprofile" element={<Myprofile/>}/>
@@ -24,7 +25,6 @@ function Routing() {
             <Route path="/Addchannel" element={<Addchannel/>}/> 
             <Route path="/Aboutus" element={<Aboutus/>}/> 
         </Routes>
-
 
     
   );

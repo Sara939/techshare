@@ -1,26 +1,22 @@
-import { Component } from "react";
+import { useState } from "react";
 import React from "react";
 import {signInWithEmailAndPassword} from 'firebase/auth';
-import { auth } from "./Signup";
+import { auth } from "../../../conrext/usercontext";
+// import {useRouter } from 'next/router';
 
-class Login extends Component{
-    state= {
-        email: '',
-        password:''
+function Login (){
 
+    const [email, setEmail]= useState("");
+    const [password, setPassword]= useState("");
 
-    }
-    handleChange= (e) =>{
-        this.setState({
-        [e.target.id] : e.target.value
-
-        })
-    }
-    handleSubmit= (e)=>{
+    // const route= useRouter();
+    const handleSubmit= (e)=>{
         e.preventDefault();
-        signInWithEmailAndPassword(auth,this.state.email,this.state.password)
+        console.log(email, password);
+        signInWithEmailAndPassword(auth,email,password)
         .then((cred) => {
             console.log( "user logged in",cred.user);
+            // route.push('/home')
 
         })
         .catch((err) =>{
@@ -29,32 +25,27 @@ class Login extends Component{
     }
 
 
-    render(){
-        return(
-            <div className="container">
+    return(
+        <div className="container">
                 
-                <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Login</h5>
-                    <div className="input-field">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <button className="btn grey lighten-1 z-depth-0">Login</button>
-                    </div>
-                </form>
-
+        <form className="white" onSubmit={handleSubmit}>
+            <h5 className="grey-text text-darken-3">Login</h5>
+            <div className="input-field">
+                <label htmlFor="email">Email</label>
+                <input type="email" value={email} onChange={ e=>{setEmail(e.target.value)}}/>
             </div>
+            <div className="input-field">
+                <label htmlFor="password">Password</label>
+                <input type="password" value={password} onChange={e =>{setPassword(e.target.value)}}/>
+            </div>
+            <div className="input-field">
+                <button className="btn grey lighten-1 z-depth-0">Login</button>
+            </div>
+        </form>
 
-        )
-
-
-
-    }
+    </div>
+    )
 }
+
 
 export default Login; 

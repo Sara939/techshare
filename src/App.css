@@ -29,3 +29,8 @@ form button, form h5{
 /* nav{
     background-color: #ced4da00;
 } */
+
+.profileimg{
+    padding: 100%;
+    display: block;
+}

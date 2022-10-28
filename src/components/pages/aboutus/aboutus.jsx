@@ -19,7 +19,7 @@ function Aboutus() {
         
       </div>
 
-      <Imges url={"tablestudy.jpeg"} height={450} width={400}/>
+      <Imges className={"imges"} url={"tablestudy.jpeg"} height={450} width={400}/>
       <Conectform/>
 
     </div>

@@ -1,10 +1,11 @@
 import "./myprofile.css";
 import React from "react";
 
-function Myprofile() {
+function Myprofile(props) {
   return (
     <div className="my-profile">
-      <h1>my-profile</h1>
+
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 function Imges(props){
     return(
-        <img className="imges" alt="" src={props.url} width={props.width} height={props.height}/>
+        <img className={props.className} alt="" src={props.url} width={props.width} height={props.height}/>
     )
 }
 

@@ -1,7 +1,7 @@
 import "./Footer.css";
 import React from "react";
 import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
-import Logo from "../Logo/Logo";
+
 
 export  const Footer = () => {
   return (
@@ -10,8 +10,8 @@ export  const Footer = () => {
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
-              <Logo size="100px"/>
-              {/* <span className="ml-3 h5 font-weight-bold"> TechShare</span> */}
+              {/* <Logo size="100px"/> */}
+              <span className="ml-3 h5 font-weight-bold"> TechShare</span>
             </a>
             <p className="my-3" style={{ width: '250px' }}>
             We are creating a collaborative system in order to share knowledge about training techniques, videos, guides and encouragement
