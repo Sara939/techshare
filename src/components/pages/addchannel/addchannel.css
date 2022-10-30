@@ -5,6 +5,7 @@
     border: solid rgb(125, 119, 119) 6px ;
     border-radius: 1%;
     padding: 5vh;
+    background-color: white;
 }
   .addlabel {
     text-align: left;
