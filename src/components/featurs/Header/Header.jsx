@@ -1,10 +1,11 @@
 import React from "react";
 import {signOut} from 'firebase/auth';
-import { auth} from '../../../conrext/usercontext';
+import { auth} from '../../../context/usercontext';
 import Imges from "../imges/imges";
 
 
 function Header(){
+
 
     const handleClickOut= () => {
         signOut(auth)
@@ -14,6 +15,7 @@ function Header(){
         })
     }
 
+    
 
     return(
         <div className="navbar-fixed">

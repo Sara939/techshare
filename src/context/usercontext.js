@@ -19,9 +19,17 @@ const firebaseConfig = {
 
 export const auth= getAuth();
 
-// export function UserProvider({Children}){
+export const UserContext = createContext();
 
-// const [user, setUser]= useState({email,password,firstName,lastName});
+
+export const Userextradata = createContext();
+
+
+//  function UserProvider({Children}){
+//   const [user, loading]= useAuthState(auth);
+
+
+// // const [user, setUser]= useState({email,password,firstName,lastName});
 
 //   return(
 //       <UserContext.Provider value={{user}}>
@@ -30,8 +38,7 @@ export const auth= getAuth();
 //   );
 // }
 
+// export default UserProvider;
 
-const UserContext = createContext();
 
-export default UserContext;
 

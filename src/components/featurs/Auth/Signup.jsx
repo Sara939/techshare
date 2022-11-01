@@ -1,10 +1,30 @@
 import { useState } from "react";
 import React from "react";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import { auth } from "../../../conrext/usercontext";
+import { auth, Userextradata } from "../../../context/usercontext";
+
+
+
 
 
 function SignUp(){
+
+    const handleSubmit= (e)=>{
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth,email,password)
+        .then((cred) => {
+            console.log( "user created",cred.user);
+            const extra= {email,password,firstName,lastName,picture};
+            console.log(extra);
+            
+
+
+        })
+        .catch((err) =>{
+            console.log(err.message);
+        })  
+    };
+    
 
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
@@ -13,28 +33,16 @@ function SignUp(){
     const [picture, setPicture]= useState("");
 
 
-    const handleSubmit= (e)=>{
-        e.preventDefault();
-        console.log(email,password,firstName,lastName,picture);
-        createUserWithEmailAndPassword(auth,email,password,firstName,lastName,picture)
-        .then((cred) => {
-            console.log( "user created",cred.user);
-
-        })
-        .catch((err) =>{
-            console.log(err.message);
-        })  
-    }
-
-
         return(
+
+            
             <div className="container">
                 
                 <form className="white" id="signupform" onSubmit={handleSubmit}>
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
-                        <input type="email" value={email} onChange={ e=>{setEmail(e.target.value)}}/>
+                        <input type="email" value={email} onChange={e=>{setEmail(e.target.value)}}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="password">Password</label>
@@ -58,7 +66,6 @@ function SignUp(){
                     </div>
                 </form>
             </div>
-
         )
 
 }

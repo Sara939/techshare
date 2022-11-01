@@ -1,35 +1,32 @@
 import './App.css';
-// import { useState } from 'react';
 import {BrowserRouter as Router} from "react-router-dom";
 import {Footer} from './components/featurs/footer/Footer';
 import Routing from './router/routing/routing';
-import Header from './components/featurs/Header/Header';
-import HeaderOut from './components/featurs/Header/Headerout';
-import {useAuthState} from 'react-firebase-hooks/auth';
-import { auth } from './conrext/usercontext';
+import { auth, UserContext, Userextradata} from './context/usercontext';
+import { HomeNav } from './components/featurs/homeNav/HomeNav';
+import {useAuthState} from "react-firebase-hooks/auth";
+import { useContext, useState } from 'react';
+import { Signup } from './components/featurs/Auth/Signup'
 
 
 function App() {
 
-const [user, loading]= useAuthState(auth);
-
+  const [user, loading]= useAuthState(auth);
 
   return (
 
-    
+    <UserContext.Provider value={{user}}>
+      {/* <Userextradata.Provider value={{extra}}> */}
+
       <Router>
-        {!user && (
-          // <>
-          <HeaderOut/>
-          // </>
-        )} 
-        {user && (
-          <Header/>
-        )}
+        <HomeNav/>
         <Routing/> 
         <Footer/>
-
       </Router>
+
+      {/* </Userextradata.Provider> */}
+    </UserContext.Provider>
+
   );
   
 }

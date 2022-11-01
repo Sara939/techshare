@@ -56,10 +56,9 @@ function Addchannel() {
             <Form.Control placeholder="Enter Video Url" type="text" required  value={videoname} onChange={e => setVideoname(e.target.value)}/>       
           </Form.Group>
           
-          <Form.Group className="mb-4">   
-          <input type="checkbox"  required/>  
-            <Form.Check  label="I Checked that Url link writen corectly" required/>
-          </Form.Group>
+          {/* <Form.Group className="mb-4">   
+            <Form.Check type="checkbox" required label="I Checked that Url link writen corectly"/>
+          </Form.Group> */}
 
           <button className="btn grey lighten-1 z-depth-0" type="submit">Submit</button>
             
