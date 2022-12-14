@@ -4,10 +4,12 @@ import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // json-server db.json -p 3001 --- server start commend
 
 function Addchannel() {
+  const navigate = useNavigate();
   const [title, setTitle]= useState("");
   const [text, setText]= useState("");
   const [videoname, setVideoname]= useState("");
@@ -30,6 +32,7 @@ function Addchannel() {
         })
         .then(res => res.json())
         .then(alert("Video ADD! Go to ==> Chanells to check it out"))
+        .then(navigate("/Channels"));
       }
       catch(err){
         console.log(err);}
