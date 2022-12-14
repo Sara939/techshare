@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 
 
 function SignUp(){
-
+    
+    const navigate = useNavigate();
     const handleSubmit= (e)=>{
         e.preventDefault();
         createUserWithEmailAndPassword(auth,email,password)
