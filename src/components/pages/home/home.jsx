@@ -8,11 +8,11 @@ function Home() {
   return (
     <div >
 
-     
-        <Imges className={"imges"} url={"web-design-2906159_1280.jpg"} width={1260} height={420}/>
-     
+      <Imges className={"imges"} url={"web-design-2906159_1280.jpg"} width={1260} height={420}/>
+      {/* <Date date= {new Date("22-2-2022")}/> */}
 
       <div className="headandtext">
+        
         <Headline/>
         <Text/>
       </div>
