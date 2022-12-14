@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { auth, Userextradata } from "../../../context/usercontext";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -16,9 +17,7 @@ function SignUp(){
             console.log( "user created",cred.user);
             const extra= {email,password,firstName,lastName,picture};
             console.log(extra);
-            
-
-
+            navigate("/");
         })
         .catch((err) =>{
             console.log(err.message);

@@ -2,10 +2,11 @@ import { useState } from "react";
 import React from "react";
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import { auth } from "../../../context/usercontext";
+import { useNavigate } from "react-router-dom";
 
 
 function Login (){
-
+    const navigate = useNavigate();
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
 
@@ -15,13 +16,12 @@ function Login (){
         signInWithEmailAndPassword(auth,email,password)
         .then((cred) => {
             console.log( "user logged in",cred.user);
-
+            navigate("/");
         })
         .catch((err) =>{
             console.log(err.message);
         })  
     }
-
 
     return(
         <div className="container">
