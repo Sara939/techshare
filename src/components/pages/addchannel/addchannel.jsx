@@ -1,9 +1,7 @@
 import "./addchannel.css";
 import React from "react";
 import { useState } from "react";
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 // json-server db.json -p 3001 --- server start commend
@@ -17,7 +15,7 @@ function Addchannel() {
   
     const postData = async (e) => {
   
-      // e.preventDefault();
+      e.preventDefault();
       try{
          await fetch('http://localhost:3001/Api', {
         method: 'POST',
@@ -59,24 +57,10 @@ function Addchannel() {
             <Form.Control placeholder="Enter Video Url" type="text" required  value={videoname} onChange={e => setVideoname(e.target.value)}/>       
           </Form.Group>
           
-          {/* <Form.Group className="mb-4">   
-            <Form.Check type="checkbox" required label="I Checked that Url link writen corectly"/>
-          </Form.Group> */}
-
           <button className="btn grey lighten-1 z-depth-0" type="submit">Submit</button>
             
       </form>
       )
-      // if (res => 200) {
-      //   return (
-      //     <>
-          
-      //       <div className="text-2xl">Thank you!</div>
-      //       <div className="text-md">Go to Channels to see the Video add</div>
-      //       <Link to={"/Channels"}>CHANNELS</Link>
-      //     </>
-      //   );
-      // }
   }
 
 

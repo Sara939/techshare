@@ -8,11 +8,5 @@ export const HomeNav = () => {
     
     const {user} =useContext(UserContext);
 
-    return (
-                <>
-                {user ? (<Header/>) :(<HeaderOut/>)}
-
-                </>
-    
-  )
+    return <>{user ? (<Header/>) :(<HeaderOut/>)}</>
 };
