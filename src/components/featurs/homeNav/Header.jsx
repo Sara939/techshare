@@ -4,17 +4,12 @@ import { auth} from '../../../context/usercontext';
 
 
 function Header(){
-
-
     const handleClickOut= () => {
         signOut(auth)
         .then(() => {
             console.log("the user sign out", auth);
-            
         })
     }
-
-    
 
     return(
         <div className="navbar-fixed">

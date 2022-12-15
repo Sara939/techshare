@@ -1,0 +1,7 @@
+.dates{
+    box-sizing: revert;
+    border-radius: 11%;
+    border: 3px solid black;
+    direction: rtl;
+    display: inline-block;
+}

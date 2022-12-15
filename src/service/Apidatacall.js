@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import BasicVideo from "../components/featurs/CardGuide/BasicVideo";
 import CardGuide from "../components/featurs/CardGuide/CardGuide";
 import { Stack } from "react-bootstrap";

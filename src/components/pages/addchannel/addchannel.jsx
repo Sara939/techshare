@@ -31,6 +31,8 @@ function Addchannel() {
         .then(res => res.json())
         .then(alert("Video ADD! Go to ==> Chanells to check it out"))
         .then(navigate("/Channels"));
+        
+        
       }
       catch(err){
         console.log(err);}
