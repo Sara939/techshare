@@ -2,7 +2,7 @@ import "./CurrentDate.css";
 
 function CurrentDate(){
   const currentDay= new Date().getFullYear()
-  const currentMonth= new Date().toLocaleString('default', { month: 'long' })
+  const currentMonth= new Date().toLocaleString('en-US', { month: 'long' })
   const currentYear= new Date().toLocaleString('default', { day: '2-digit' })
  
  return(
