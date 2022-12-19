@@ -2,10 +2,9 @@ import './App.css';
 import {BrowserRouter as Router} from "react-router-dom";
 import {Footer} from './components/featurs/footer/Footer';
 import Routing from './router/routing/routing';
-import { auth, UserContext, Userextradata} from './context/usercontext';
+import { auth, UserContext} from './context/usercontext';
 import { HomeNav } from './components/featurs/homeNav/HomeNav';
 import {useAuthState} from "react-firebase-hooks/auth";
-import { useContext, useState } from 'react';
 
 
 

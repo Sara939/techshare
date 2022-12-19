@@ -1,4 +1,3 @@
-// import React from "react";
 import { createContext} from "react";
 import { initializeApp} from 'firebase/app';
 import { getAuth} from 'firebase/auth';
@@ -24,21 +23,6 @@ export const UserContext = createContext();
 
 export const Userextradata = createContext();
 
-
-//  function UserProvider({Children}){
-//   const [user, loading]= useAuthState(auth);
-
-
-// // const [user, setUser]= useState({email,password,firstName,lastName});
-
-//   return(
-//       <UserContext.Provider value={{user}}>
-//           {Children}
-//       </UserContext.Provider>
-//   );
-// }
-
-// export default UserProvider;
 
 
 
