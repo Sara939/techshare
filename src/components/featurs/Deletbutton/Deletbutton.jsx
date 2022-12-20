@@ -12,13 +12,12 @@ function Deletbutton(){
     };
 
     return (
-        <div>
-        
-        <div><h6>Choose number of video to delete</h6></div>
-        <input type="number" onChange={e => setMyid(e.target.value)}/>
-        <div>
-        <button className="Deletbutton" onClick={sendid}>Delete Video</button>
-        </div>
+        <div className="frame">
+            <div className="input" ><h6>Choose number of video to delete</h6></div>
+                <input className="Deletinput" type="number" onChange={e => setMyid(e.target.value)}/>
+            <div>
+                <button className="Deletbutton" onClick={sendid}>Delete Video</button>
+            </div>
         </div>
     )
 }

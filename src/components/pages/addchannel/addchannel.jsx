@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
-
+import Filter from "../../featurs/Filter/Filter";
 
 // json-server db.json -p 3001 --- server start commend
 
@@ -13,6 +13,7 @@ function Addchannel() {
   const [text, setText]= useState("");
   const [videoname, setVideoname]= useState("");
   const [currentDate, setCurrentDate]= useState("");
+  const [category, setCategory]= useState("");
 
   
   
@@ -31,7 +32,8 @@ function Addchannel() {
           "title": title ,
           "text": text,
           "videoname" :videoname,
-          "date": new Date(currentDate)
+          "date": new Date(currentDate),
+          "category": category
         })
         })
         .then(res => res.json())
@@ -50,6 +52,10 @@ function Addchannel() {
         <form onSubmit={postData} className="add"> 
         <h1 className="addlabel">ADD YOUR BEST CHANNEL RECCOMNDATION</h1>
 
+        <Form.Group className="mb-4" >
+            <Form.Label className="addlabel">Category</Form.Label>
+            <Form.Control placeholder="JS/React/Node.js" type="text" required  value={category} onChange={e => setCategory(e.target.value)}/>       
+          </Form.Group>
 
           <Form.Group className="mb-4" >
             <Form.Label className="addlabel">Video Title</Form.Label>
