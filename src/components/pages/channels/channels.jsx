@@ -5,6 +5,7 @@ import BasicVideo from "../../featurs/CardGuide/BasicVideo";
 import { Stack } from "react-bootstrap";
 import Apidatacall from "../../../service/Apidatacall";
 import Deletbutton from "../../featurs/Deletbutton/Deletbutton";
+import Filter from "../../featurs/Filter/Filter";
 
 
 function Channels() {
@@ -12,7 +13,7 @@ function Channels() {
   return (
     <>
     
- 
+    <Filter/>
     <Stack  direction="horizontal" gap={5}>
 
       <div>
@@ -36,8 +37,6 @@ function Channels() {
       <Stack direction="horizontal" gap={5}>
         <Apidatacall/>
         <Deletbutton/>
-        
-        
       </Stack>
 
  

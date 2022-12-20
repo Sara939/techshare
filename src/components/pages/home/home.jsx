@@ -14,7 +14,7 @@ function Home() {
       <div className="headandtext">
         <CurrentDate/>
         <Headline/>
-        <Text/>      
+        <Text/>  
       </div>
     </>
   );
