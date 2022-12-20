@@ -3,12 +3,13 @@ import  DeletVideo from "../../../service/Apidelet";
 import React from "react";
 import { useState } from "react";
 
-function Deletbutton(){
+function Deletbutton(props){
     const [myid, setMyid]= useState('');
 
     const sendid= (someid)=>{
         console.log("send"+ myid);
         DeletVideo({myid});
+        props.onbtnshown();
     };
 
     return (

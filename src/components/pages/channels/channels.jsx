@@ -5,10 +5,16 @@ import BasicVideo from "../../featurs/CardGuide/BasicVideo";
 import { Stack } from "react-bootstrap";
 import Apidatacall from "../../../service/Apidatacall";
 import Deletbutton from "../../featurs/Deletbutton/Deletbutton";
+import { useState } from "react";
 
 
 
 function Channels() {
+  const [btnshown, setBtnshown]= useState(true);
+
+const onbtnshown =()=>{
+  setBtnshown(true)
+};
 
   return (
     <>
@@ -29,14 +35,15 @@ function Channels() {
       <BasicVideo videoname="https://www.youtube.com/embed/w7ejDZ8SWv8"/>
       {/* https://st.depositphotos.com/1034557/3837/v/600/depositphotos_38371903-stock-video-learn-word-sphere.mp4 */}
       <CardGuide title="Traversy Media " text="Traversy Media features the best online web development and programming tutorials for all of the latest web technologies from the building blocks of HTML, CSS & JavaScript to frontend frameworks like React and Vue to backend technologies like Node.js, Python and PHP" btn="Unable to delete"/>
-      
       </div>
+      
       </Stack>
+      <Apidatacall/>
+      {
+        btnshown==false? <Deletbutton onbtnshown={onbtnshown}/> : <button onClick={()=>{setBtnshown(false)}}>press here to open delete window</button>
+      }
+      
 
-      <Stack direction="horizontal" gap={5}>
-        <Apidatacall/>
-        <Deletbutton/>
-      </Stack>
 
  
     </>
