@@ -14,6 +14,7 @@ function Deletbutton(props){
 
     return (
         <div className="frame">
+            <button onClick={()=>{props.onbtnshown()}}>X Close</button>
             <div className="input" ><h6>Choose number of video to delete</h6></div>
                 <input className="Deletinput" type="number" onChange={e => setMyid(e.target.value)}/>
             <div>

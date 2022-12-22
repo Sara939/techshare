@@ -27,11 +27,11 @@ function Apidatacall(){
     if (api.length <= 0){
         return <h1>There is No Videos to Show</h1>
     }
-    const filteredData= api.filter(item=>{return item.category.toLowerCase()=== sub})
+    const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
 
     
     return ( 
-        <div className="data">
+        <>
             <Filter onselectionHendler={onselectionHendler}/>
             <Stack direction="horizontal" gap={5}>   
                 {filteredData.map((item) => {
@@ -40,7 +40,7 @@ function Apidatacall(){
                         <CardGuide category= {item.category} title= {item.title} text={item.text} id={item.id}/>
                     </div> })}
             </Stack>
-        </div>
+        </>
 )};
 
 export default Apidatacall; 

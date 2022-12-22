@@ -12,10 +12,9 @@ const Filter = (props)=>{
         <div>
             <label htmlFor="subject">Filter by category</label>
             <select id="subject" onClick={selectionHendler} >
-                {/* <option value="all">all</option> */}
-                <option value="js">js</option>
-                <option value="react">react</option>
-                <option value="node.js">node.js</option>
+                <option value="js">Java Script</option>
+                <option value="react">React</option>
+                <option value="node">Node.js</option>
             </select>
         </div>
     )
