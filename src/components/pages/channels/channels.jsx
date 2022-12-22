@@ -16,10 +16,11 @@ const onbtnshown =()=>{
 
   return (
     <>
-      <Apidatacall/>
+      
       {
         btnshown===false? <Deletbutton onbtnshown={onbtnshown}/> : <button onClick={()=>{setBtnshown(false)}}>press here to open delete window</button>
       }
+      <Apidatacall/>
     </>
   );
 };
