@@ -6,11 +6,10 @@ function CurrentDate(){
   const currentYear= new Date().toLocaleString('default', { day: '2-digit' })
  
  return(
-  <div className="dates">
+  <div className="btn grey lighten-3 z-depth-0 date">
     <div>{currentYear}</div>
     <div>{currentMonth}</div>
     <div>{currentDay}</div> 
- 
   </div>
  )
 }

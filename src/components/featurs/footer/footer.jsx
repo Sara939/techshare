@@ -9,7 +9,7 @@ export  const Footer = () => {
       <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
-            <a href="/" className="d-flex align-items-center p-0 text-dark">
+            <a href="/" className="d-flex align-items-center p-0 text-light">
               {/* <Logo size="100px"/> */}
               <span className="ml-3 h5 font-weight-bold"> TechShare</span>
             </a>
@@ -44,7 +44,7 @@ export  const Footer = () => {
             Join Us
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/Profile">Profile</CDBFooterLink>
+              {/* <CDBFooterLink href="/Profile">Profile</CDBFooterLink> */}
               <CDBFooterLink >Sign Up</CDBFooterLink>
               <CDBFooterLink >Sign In</CDBFooterLink>
             </CDBBox>

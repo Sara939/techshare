@@ -1,10 +1,5 @@
-.dates{
-    box-sizing: revert;
-    border-radius: 11%;
-    border: 3px solid rgb(221, 142, 16);
-    display: inline-block;
-    background-color: rgb(37, 36, 36);
-    color: aliceblue;
-    padding: 1%;
-    font-weight:500;
+.date{
+    height:fit-content;
 }
+
+

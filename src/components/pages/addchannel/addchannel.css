@@ -1,5 +1,5 @@
 .add {
-    max-width: 50vw;
+    max-width: 90vw;
     margin: 3% auto;
     text-align: center;
     border: solid rgb(125, 119, 119) 6px ;
@@ -10,8 +10,10 @@
   .addlabel {
     text-align: left;
     display: block;
-    font-size: 2vw;
+    font-size: 1.7vw;
     color: grey;
+    margin: auto;
+    padding: 2%;
   }
 
   @media (max-width: 753px){
@@ -20,10 +22,17 @@
       
     }
   }
-  body{
-    background-color: #f4cf9e84;
+
+
+  .page-footer{
+    background-color: #212529;
   }
-  .form-check-input{
-    background-color: black;
-    opacity: 100;
+
+  .headline{
+    color: rgb(136, 138, 141);
   }
+  .text{
+    color:  #e6e6e6 ;
+  }
+  /* #e6e6e6 אפור */
+  /* #6c63ff */

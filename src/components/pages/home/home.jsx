@@ -9,12 +9,15 @@ function Home() {
 
   return (
     <>
-      <Imges className={"imges"} url={"web-design-2906159_1280.jpg"} width={1260} height={410}/>
+      
       
       <div className="headandtext">
         <CurrentDate/>
         <Headline/>
         <Text/>  
+        <Imges className={"imges"} url={"home.png"} width={390} height={450}/>
+        <Imges className={"imges"} url={"home2.png"} width={390} height={450}/>
+        <Imges className={"imges"} url={"home3.png"} width={390} height={450}/>
       </div>
     </>
   );
