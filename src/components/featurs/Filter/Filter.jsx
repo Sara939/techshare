@@ -7,23 +7,22 @@ const Filter = (props)=>{
     };
 
     return (
-    <div class="container">
+    <div class="container browser-default">
         <div class="row">
             <form class="col s12">
                 <div class="row">
-                    <label>Select</label>
                     <div class="select1 green-text">
-                        <select onClick={selectionHendler} >
+                        <select  className="browser-default" onClick={selectionHendler} >
                             <option value=""
                                     disabled selected>
-                              Select Topic
+                              Search by Category
                           </option>
-                            <option value="1">
-                              Machine Learning</option>
-                            <option value="2">
-                              Web Development</option>
-                            <option value="3">
-                              Language</option>
+                            <option value="js">
+                              Java Script</option>
+                            <option value="react">
+                              React</option>
+                            <option value="node">
+                              Node.JS</option>
                         </select>
                     </div>
                     </div>

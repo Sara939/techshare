@@ -2,6 +2,9 @@ import "./Deletbutton.css";
 import  DeletVideo from "../../../service/Apidelet";
 import React from "react";
 import { useState } from "react";
+import CloseButton from 'react-bootstrap/CloseButton';
+import Button from 'react-bootstrap/Button';
+
 
 function Deletbutton(props){
     const [myid, setMyid]= useState('');
@@ -13,13 +16,13 @@ function Deletbutton(props){
     };
 
     return (
-        <div className="frame">
-            <button onClick={()=>{props.onbtnshown()}}>X Close</button>
-            <div className="input" ><h6>Choose number of video to delete</h6></div>
-                <input className="Deletinput" type="number" onChange={e => setMyid(e.target.value)}/>
-            <div>
-                <button className="Deletbutton" onClick={sendid}>Delete Video</button>
+        <div className="container deletecontiner">
+            <CloseButton onClick={()=>{props.onbtnshown()}}></CloseButton>
+            <label className="black-text text-darken-3"> Choose number of channel to delete</label >
+            <div className="input-field" >
+                <input type="number" onChange={e => setMyid(e.target.value)}/>
             </div>
+            <Button onClick={sendid} variant="outline-danger">Delete channel </Button>{' '}
         </div>
     )
 }

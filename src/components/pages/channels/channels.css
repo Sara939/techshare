@@ -1,7 +1,4 @@
-.crdbtn{
-    background-color: #271786;
-    height: 2rem;
-}
+
 .hstack {
     margin: 3%;
     display: flex;
@@ -14,4 +11,13 @@
     display: block;
     }
   }
+
+.deletechanales{
+    width: 80%;
+    padding: 10px;
+    border-radius: 2px;
+    height: 3rem;
+    margin: 2%;
+    margin-left: 10%;
+}
   

@@ -11,7 +11,7 @@ function CardGuide(props){
           <Card.Text>
           {props.text}
           </Card.Text>
-          <Button className='crdbtn'><h6>{props.id}{props.btn}</h6></Button>
+          <Button variant="secondary"><h6>{props.id}{props.btn}</h6></Button>
         </Card.Body>
       </Card>
     )

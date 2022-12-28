@@ -1,22 +1,4 @@
-.Deletbutton{
-    background-color:#6a0a0a58;
-    border-radius: 5%;
-    margin: 2%;
-    border: 2px solid;
-    width: 79%;
-    padding: 2%;
-    
-}
-
-.frame{
-    border: black 2px solid;
-    padding: 2%;
-    border-radius: 3%;
-}
-
-.Deletinput{
-    border: black 2px solid;
-    padding: 2%;
-    border-radius: 3%;
+.deletecontiner{
+    margin: 1%;
     
 }

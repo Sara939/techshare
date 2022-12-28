@@ -3,6 +3,7 @@ import React from "react";
 import Apidatacall from "../../../service/Apidatacall";
 import Deletbutton from "../../featurs/Deletbutton/Deletbutton";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -16,11 +17,12 @@ const onbtnshown =()=>{
 
   return (
     <>
-      
-      {
-        btnshown===false? <Deletbutton onbtnshown={onbtnshown}/> : <button onClick={()=>{setBtnshown(false)}}>press here to open delete window</button>
-      }
       <Apidatacall/>
+      {
+        btnshown===false? <Deletbutton onbtnshown={onbtnshown}/> : (
+          <Button className="deletechanales" onClick={()=>{setBtnshown(false)}} variant="secondary" size="xlg">Press to Delete Channale</Button>
+        )
+      }      
     </>
   );
 };
