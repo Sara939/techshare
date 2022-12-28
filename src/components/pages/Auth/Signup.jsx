@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import { auth, Userextradata } from "../../../context/usercontext";
+import { auth} from "../../../context/usercontext";
 import { useNavigate } from "react-router-dom";
 
 

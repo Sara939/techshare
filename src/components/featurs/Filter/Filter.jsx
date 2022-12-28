@@ -35,11 +35,3 @@ const Filter = (props)=>{
 };
 
 export default Filter; 
-       {/* <div>
-            <label htmlFor="subject">Filter by category</label>
-            <select id="subject" >
-                <option value="js">Java Script</option>
-                <option value="react">React</option>
-                <option value="node">Node.js</option>
-            </select>
-        </div>  */}

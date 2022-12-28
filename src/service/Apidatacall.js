@@ -25,7 +25,7 @@ function Apidatacall(){
     }, [])
 
     if (api.length <= 0){
-        return <img style={{ marginLeft: "30%"}} src="loading.gif"></img>
+        return <img alt="" style={{ marginLeft: "30%"}} src="loading.gif"></img>
     }
     const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
 

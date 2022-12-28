@@ -24,7 +24,7 @@ function Topchart() {
   <>
 
       { 
-      loadingapi ? (<img style={{ marginLeft: "30%"}} src="loading.gif"></img> ) : (
+      loadingapi ? (<img alt="" style={{ marginLeft: "30%"}} src="loading.gif"></img> ) : (
       <Table striped bordered hover variant="dark">
           <thead><tr><th>ID</th><th>CHANNEL TITLE</th><th>CHANNEL DESCRIPTION</th><th>DATE ADDED</th></tr></thead>
           <tbody>
