@@ -1,7 +1,7 @@
 import './App.css';
 
 import {BrowserRouter as Router} from "react-router-dom";
-import {Footer} from './components/featurs/footer/Footer';
+import Footer from './components/featurs/Footer/Footer';
 import Routing from './router/routing/routing';
 import { auth, UserContext} from './context/usercontext';
 import { HomeNav } from './components/featurs/homeNav/HomeNav';
