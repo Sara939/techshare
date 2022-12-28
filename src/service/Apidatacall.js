@@ -25,7 +25,7 @@ function Apidatacall(){
     }, [])
 
     if (api.length <= 0){
-        return <h1>There is No Videos to Show</h1>
+        return <img style={{ marginLeft: "30%"}} src="loading.gif"></img>
     }
     const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
 

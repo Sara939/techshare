@@ -17,9 +17,6 @@ export  const Footer = () => {
             We are creating a collaborative system in order to share knowledge about training techniques, videos, guides and encouragement
             </p>
             <CDBBox display="flex" className="mt-4">
-              <CDBBtn flat color="dark">
-                <CDBIcon fab icon="facebook-f" href="https://he-il.facebook.com/"/>
-              </CDBBtn>
               <CDBBtn flat color="dark" className="mx-3" href="https://www.linkedin.com/in/sara-likaount/">
                 <CDBIcon fab icon="linkedin-in" />
               </CDBBtn>
@@ -44,7 +41,6 @@ export  const Footer = () => {
             Join Us
             </p>
             <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              {/* <CDBFooterLink href="/Profile">Profile</CDBFooterLink> */}
               <CDBFooterLink >Sign Up</CDBFooterLink>
               <CDBFooterLink >Sign In</CDBFooterLink>
             </CDBBox>
