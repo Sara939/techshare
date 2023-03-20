@@ -21,7 +21,7 @@ function Addchannel() {
   
       e.preventDefault();
       try{
-         await fetch('http://localhost:3001/Api', {
+         await fetch('http://localhost:5000/Addchannel', {
         method: 'POST',
         mode: 'cors',
         headers: {

@@ -19,7 +19,7 @@ const Footer = () => {
           <h5 class="white-text">Information</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="/AboutUs">About Us</a></li>
-            <li><a class="grey-text text-lighten-3" href="/Contact">Contact</a></li>
+            <li><a class="grey-text text-lighten-3" href="/AboutUs">Contact</a></li>
             <li><a class="grey-text text-lighten-3" href="/Topchart">Info Table</a></li>
             <li><a class="grey-text text-lighten-3" href="/">Support</a></li>
           </ul>
@@ -27,7 +27,7 @@ const Footer = () => {
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="/Add channel">Add Channel</a></li>
+            <li><a class="grey-text text-lighten-3" href="/Addchannel">Add Channel</a></li>
             <li><a class="grey-text text-lighten-3" href="/Channels">Watch Channels</a></li>
             <li><a class="grey-text text-lighten-3" href="/Channels">Delete Channel</a></li>
           </ul>
