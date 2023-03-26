@@ -14,32 +14,32 @@ function Apidatacall(){
         setSub(datafromfilter);
     };
 
+        
+    useEffect(() => {
     const getData = async () => {
         const response = await fetch("http://localhost:5000/Channels")
         const json = await response.json()
-        setApi(json)
-        
-    };
+        setApi(json)};
 
-    useEffect(() => {
         getData()
-    }, [])
+        
+    })
 
     if (api.length <= 0){
         return <img alt="" style={{ marginLeft: "30%"}} src="loading.gif"></img>
     }
-    const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
-
+    // const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
+    // console.log(filteredData);
     
     return ( 
         <>
-            <Filter onselectionHendler={onselectionHendler}/>
+            {/* <Filter onselectionHendler={onselectionHendler}/> */}
             <Stack direction="horizontal" gap={5}>   
-                {filteredData.map((item) => {
-                    return <div>    
-                        <BasicVideo videoname= {item.videoname} />
-                        <CardGuide category= {item.category} title= {item.title} text={item.text} id={item.id}/>
-                    </div> })}
+                {api.length>0 && api.map((item) => (
+                    <div>    
+                        {/* <BasicVideo videoname= {item.videoname} /> */}
+                        <CardGuide category= {item.category} title= {item.title} text={item.text} id={item._id}/>
+                    </div> ))}
             </Stack>
         </>
 )};

@@ -7,11 +7,11 @@ const Filter = (props)=>{
     };
 
     return (
-    <div class="container browser-default">
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="select1 green-text">
+    <div className="container browser-default">
+        <div className="row">
+            <form className="col s12">
+                <div className="row">
+                    <div className="select1 green-text">
                         <select  className="browser-default" onClick={selectionHendler} >
                             <option value=""
                                     disabled selected>
