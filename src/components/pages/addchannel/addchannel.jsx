@@ -4,7 +4,7 @@ import { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
 
-// json-server db.json -p 3001 --- server start commend
+
 
 function Addchannel() {
   const navigate = useNavigate();
@@ -36,8 +36,8 @@ function Addchannel() {
         })
         })
         .then(res => res.json())
-        .then(alert("Video ADD! Go to ==> Chanells to check it out"))
-        .then(navigate("/Channels"));
+        // .then(alert("Video ADD! Go to ==> Chanells to check it out"))
+        // .then(navigate("/Channels"));
         
         
       }
