@@ -28,21 +28,22 @@ function Apidatacall(){
     if (api.length <= 0){
         return <img alt="" style={{ marginLeft: "30%"}} src="loading.gif"></img>
     }
-    // const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
-    // console.log(filteredData);
+    const filteredData= api.filter(item=>{return item.category.toLowerCase().includes(sub)})
+
     
     return ( 
         <>
-            {/* <Filter onselectionHendler={onselectionHendler}/> */}
-            <Stack direction="horizontal" gap={5}>   
-                {api.length>0 && api.map((item) => (
-                    <div>    
-                        {/* <BasicVideo videoname= {item.videoname} /> */}
-                        <CardGuide category= {item.category} title= {item.title} text={item.text} id={item._id}/>
-                    </div> ))}
+            <Filter onselectionHendler={onselectionHendler}/>
+            <Stack direction="horizontal" gap={5}> 
+                {api.length>0 && filteredData.map((item) => (
+                <div>    
+                    <BasicVideo videoname= {item.videoname} />
+                    <CardGuide category= {item.category} title= {item.title} text={item.text} id={item._id} key={item._id}/>
+                </div>
+                ))
+                }
             </Stack>
         </>
 )};
 
 export default Apidatacall; 
-// json-server db.json -p 3001
