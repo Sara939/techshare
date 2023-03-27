@@ -9,7 +9,7 @@ function Topchart() {
   const [api, setApi] = useState([]);
 
   const getData = async () => {      
-    const response = await fetch("http://localhost:3001/Api")
+    const response = await fetch("http://localhost:5000/Channels")
     const json = await response.json()
     setApi(json)
     setLoadingapi(false)  
