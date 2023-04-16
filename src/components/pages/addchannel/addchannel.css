@@ -34,5 +34,10 @@
   .text{
     color:  #e6e6e6 ;
   }
+
+  
+  .btnhover:hover{
+    color: white;
+  }
   /* #e6e6e6 אפור */
   /* #6c63ff */

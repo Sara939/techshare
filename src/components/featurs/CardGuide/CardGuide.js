@@ -8,10 +8,9 @@ function CardGuide(props){
         {/* <Card.Img variant="top" src={props.videosrc} /> */}
         <Card.Body>
           <Card.Title>{props.category}:{props.title}</Card.Title>
-          <Card.Text>
-          {props.text}
-          </Card.Text>
+          <Card.Text>{props.text}</Card.Text>
           <Button variant="secondary"><h6>{props.id}{props.btn}</h6></Button>
+          <Card.Text>{props.date}</Card.Text>
         </Card.Body>
       </Card>
     )

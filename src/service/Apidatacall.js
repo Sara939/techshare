@@ -38,7 +38,7 @@ function Apidatacall(){
                 {api.length>0 && filteredData.map((item) => (
                 <div>    
                     <BasicVideo videoname= {item.videoname} />
-                    <CardGuide category= {item.category} title= {item.title} text={item.text} id={item._id} key={item._id}/>
+                    <CardGuide category= {item.category} date= {item.date} title= {item.title} text={item.text} id={item._id} key={item._id}/>
                 </div>
                 ))
                 }

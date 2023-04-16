@@ -11,7 +11,6 @@ function Addchannel() {
   const [title, setTitle]= useState("");
   const [text, setText]= useState("");
   const [videoname, setVideoname]= useState("");
-  const [currentDate, setCurrentDate]= useState("");
   const [category, setCategory]= useState("");
 
   
@@ -31,19 +30,18 @@ function Addchannel() {
           "title": title ,
           "text": text,
           "videoname" :videoname,
-          "date": new Date(currentDate),
-          "category": category
+          "category": category,
+          "date": new Date()
         })
         })
         .then(res => res.json())
-        // .then(alert("Video ADD! Go to ==> Chanells to check it out"))
-        // .then(navigate("/Channels"));
-        
-        
+        .then(navigate("/Channels"));
       }
       catch(err){
         console.log(err);}
-      finally{}
+      finally{
+
+      }
     
     }
 
@@ -71,12 +69,7 @@ function Addchannel() {
             <Form.Control placeholder="Enter Video Url" type="text" required  value={videoname} onChange={e => setVideoname(e.target.value)}/>       
           </Form.Group>
 
-          <Form.Group className="mb-4">
-            <Form.Label className="addlabel">Date</Form.Label>
-            <Form.Control type="date" required  value={currentDate} onChange={e => setCurrentDate(e.target.value)}/>       
-          </Form.Group>
-          
-          <button className="btn grey lighten-1 z-depth-0" type="submit">Submit</button>
+          <button className="btn grey lighten-1 z-depth-0 btnhover" type="submit">Submit</button>
             
       </form>
       )
