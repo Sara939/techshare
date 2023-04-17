@@ -18,9 +18,9 @@ function Deletbutton(props){
     return (
         <div className="container deletecontiner">
             <CloseButton onClick={()=>{props.onbtnshown()}}></CloseButton>
-            <label className="black-text text-darken-3"> Choose number of channel to delete</label >
+            <label className="black-text text-darken-3"> Choose channel's title to delete</label >
             <div className="input-field" >
-                <input type="number" onChange={e => setMyid(e.target.value)}/>
+                <input type="text" onChange={e => setMyid(e.target.value)}/>
             </div>
             <Button onClick={sendid} variant="outline-danger">Delete channel </Button>{' '}
         </div>

@@ -2,8 +2,12 @@
 const DeletVideo = async (props) => {
     try{
         console.log(props.myid);
-        let result = await fetch(`http://localhost:3001/Api/${props.myid}`, {method: "DELETE"})
-        if(result.status <= 200) {window.location.reload(false)} 
+        let result = await fetch(`http://localhost:5000/Topchart`,
+         {
+        method: "DELETE",
+         body: JSON.stringify({"title": props.myid})})
+        // if(result.status <= 200) console.log("good");
+        // {window.location.reload(false)} 
     }
     catch(err){
         console.log(err.massage)

@@ -20,13 +20,12 @@ function Topchart() {
 
    useEffect(() => {
         getData()
-  }, [])
+  }, [api])
 
 
   const onbtnshown =()=>{
     setBtnshown(true)
   };
-
 
 
   return (
@@ -44,7 +43,7 @@ function Topchart() {
           <tbody>
           {api.map((item) => {
             return <tr>
-              <td>{item.id}</td><td>{item.title}</td><td>{item.text}</td><td>{item.date}</td>
+              <td>{item._id}</td><td>{item.title}</td><td>{item.text}</td><td>{item.date}</td>
             </tr>
           })}
             </tbody>

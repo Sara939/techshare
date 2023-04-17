@@ -21,7 +21,7 @@ function Apidatacall(){
         const json = await response.json()
         setApi(json)};
 
-        getData()
+        getData();
         
     })
 

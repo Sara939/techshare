@@ -28,7 +28,7 @@ function Header(){
               <NavDropdown.Item href="/Addchannel">
                 Add Channel
               </NavDropdown.Item>
-              <NavDropdown.Item href="/Topchart">Info Table</NavDropdown.Item>
+              <NavDropdown.Item href="/Topchart">Delete Chart</NavDropdown.Item>
               <NavDropdown.Divider />
               {/* <NavDropdown.Item href="#action/3.4">
                 Separated link
