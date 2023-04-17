@@ -5,9 +5,7 @@ import React, { useState } from "react";
 const Conectform = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
-    setTimeout(() => {
       setSubmitted(true);
-    }, 100);
   };
 
   if (submitted) {

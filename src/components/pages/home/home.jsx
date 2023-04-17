@@ -3,23 +3,23 @@ import React from "react";
 import Headline from "../../featurs/headline/headline";
 import Imges from "../../featurs/imges/imges"
 import Text from "../../featurs/text/text";
-import Largebutton from "../../featurs/Button/Largebutton";
+import CurrentDate from "../../featurs/CurrentDate/CurrentDate";
 
 function Home() {
+
   return (
-    <div >
-
-      <div>
-        <Imges url={"web-design-2906159_1280.jpg"} width={1260} height={420}/>
-      </div>
-
+    <>
+      
+      
       <div className="headandtext">
+        <CurrentDate/>
         <Headline/>
-        <Text/>
+        <Text/>  
+        <Imges className={"imges"} url={"home.png"} width={390} height={450}/>
+        <Imges className={"imges"} url={"home2.png"} width={390} height={450}/>
+        <Imges className={"imges"} url={"home3.png"} width={390} height={450}/>
       </div>
-
-    
-    </div>
+    </>
   );
 };
 

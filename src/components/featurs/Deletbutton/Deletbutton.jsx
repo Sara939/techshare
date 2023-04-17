@@ -1,18 +1,28 @@
 import "./Deletbutton.css";
-import { DeletVideo } from "../../../service/Apidelet";
+import  DeletVideo from "../../../service/Apidelet";
 import React from "react";
 import { useState } from "react";
+import CloseButton from 'react-bootstrap/CloseButton';
+import Button from 'react-bootstrap/Button';
 
-function Deletbutton(){
-    const [id, setId]= useState();
+
+function Deletbutton(props){
+    const [myid, setMyid]= useState('');
+
+    const sendid= (someid)=>{
+        console.log("send"+ myid);
+        DeletVideo({myid});
+        props.onbtnshown();
+    };
+
     return (
-        <div>
-        
-        <div><h6>Choose number of video to delete</h6></div>
-        <input type="text" value={id} onChange={e => setId(e.target.value)}/>
-        <div>
-        <button className="Deletbutton" onClick={DeletVideo({id})}>Delete Video</button>
-        </div>
+        <div className="container deletecontiner">
+            <CloseButton onClick={()=>{props.onbtnshown()}}></CloseButton>
+            <label className="black-text text-darken-3"> Choose channel's title to delete</label >
+            <div className="input-field" >
+                <input type="text" onChange={e => setMyid(e.target.value)}/>
+            </div>
+            <Button onClick={sendid} variant="outline-danger">Delete channel </Button>{' '}
         </div>
     )
 }

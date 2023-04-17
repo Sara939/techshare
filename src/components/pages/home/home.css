@@ -1,7 +1,6 @@
 
 .headline {
     font-size: 5vw;
-    /* color: white; */
     margin: 0 auto;
     text-align: center;
     padding: 2vh;
@@ -12,5 +11,5 @@
     margin: 2% 0;
 }
 .headandtext{
-    margin: 6%;
+    margin: 3%;
 }
