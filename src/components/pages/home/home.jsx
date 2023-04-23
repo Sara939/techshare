@@ -15,9 +15,7 @@ function Home() {
         <CurrentDate/>
         <Headline/>
         <Text/>  
-        <Imges className={"imges"} url={"home.png"} width={390} height={450}/>
-        <Imges className={"imges"} url={"home2.png"} width={390} height={450}/>
-        <Imges className={"imges"} url={"home3.png"} width={390} height={450}/>
+        <Imges className={"imges"} url={"pexels-helena-lopes-933964.jpg"} width={1485} height={600}/>
       </div>
     </>
   );
