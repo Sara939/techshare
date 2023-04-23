@@ -28,11 +28,8 @@ function Header(){
               <NavDropdown.Item href="/Addchannel">
                 Add Channel
               </NavDropdown.Item>
-              <NavDropdown.Item href="/Topchart">Delete Chart</NavDropdown.Item>
+              <NavDropdown.Item href="/Topchart">Deletion table</NavDropdown.Item>
               <NavDropdown.Divider />
-              {/* <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
           <Nav>
