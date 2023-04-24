@@ -17,7 +17,7 @@ function Header(){
     }
 
     return(
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">TechShare</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
