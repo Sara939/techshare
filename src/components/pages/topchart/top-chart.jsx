@@ -43,7 +43,7 @@ function Topchart() {
           <tbody>
           {api.map((item) => {
             return <tr>
-              <td>{item.title}</td><td>{item.text}</td><td>{item.date}</td>
+              <td>{item.title}</td><td>{item.text}</td><td>{item.date.toString().split('T').join(' ')}</td>
             </tr>
           })}
             </tbody>
