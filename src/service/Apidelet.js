@@ -2,7 +2,7 @@
 const DeletVideo = async (props) => {
     try{
         console.log(props.myid);
-        let result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/Topchart`,
+        let result = await fetch(process.env.REACT_APP_BACKEND_URL+'/Topchart',
          {
         method: "DELETE",
          body: JSON.stringify({"title": props.myid})})

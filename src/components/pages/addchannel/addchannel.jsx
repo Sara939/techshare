@@ -20,7 +20,7 @@ function Addchannel() {
   
       e.preventDefault();
       try{
-         await fetch(`${process.env.REACT_APP_BACKEND_URL}/Addchannel`, {
+         await fetch(process.env.REACT_APP_BACKEND_URL+'/Addchannel', {
         method: 'POST',
         mode: 'cors',
         headers: {

@@ -12,7 +12,7 @@ function Topchart() {
   const [api, setApi] = useState([]);
 
   const getData = async () => {      
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/Channels`)
+    const response = await fetch(process.env.REACT_APP_BACKEND_URL+'/Channels')
     const json = await response.json()
     setApi(json)
     setLoadingapi(false)  
