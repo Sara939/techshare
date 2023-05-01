@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Logo from "../../featurs/Logo/Logo";
 
 
 function Header(){
@@ -16,7 +17,7 @@ function Header(){
     }
 
     return(
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">TechShare</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -28,11 +29,8 @@ function Header(){
               <NavDropdown.Item href="/Addchannel">
                 Add Channel
               </NavDropdown.Item>
-              <NavDropdown.Item href="/Topchart">Delete Chart</NavDropdown.Item>
+              <NavDropdown.Item href="/Topchart">Deletion table</NavDropdown.Item>
               <NavDropdown.Divider />
-              {/* <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
           <Nav>

@@ -1,9 +1,13 @@
 import "./Footer.css";
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaPhoneAlt} from 'react-icons/fa';
+import { useContext } from 'react';
+import { UserContext } from '../../../context/usercontext';
 
 
 const Footer = () => {
+  const {user} =useContext(UserContext);
+
   return (
     <footer class="page-footer">
     <div class="container">
@@ -17,20 +21,36 @@ const Footer = () => {
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Information</h5>
+          {user? (
           <ul>
             <li><a class="grey-text text-lighten-3" href="/AboutUs">About Us</a></li>
             <li><a class="grey-text text-lighten-3" href="/AboutUs">Contact</a></li>
             <li><a class="grey-text text-lighten-3" href="/Topchart">Info Table</a></li>
             <li><a class="grey-text text-lighten-3" href="/">Support</a></li>
           </ul>
+          ): (
+            <ul>
+            <li><a class="grey-text text-lighten-3" >About Us</a></li>
+            <li><a class="grey-text text-lighten-3">Contact</a></li>
+            <li><a class="grey-text text-lighten-3">Info Table</a></li>
+            <li><a class="grey-text text-lighten-3">Support</a></li>
+          </ul>
+          )}
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
+          {user ? (
           <ul>
             <li><a class="grey-text text-lighten-3" href="/Addchannel">Add Channel</a></li>
             <li><a class="grey-text text-lighten-3" href="/Channels">Watch Channels</a></li>
             <li><a class="grey-text text-lighten-3" href="/Channels">Delete Channel</a></li>
           </ul>
+          ):
+          (          <ul>
+            <li><a class="grey-text text-lighten-3" >Add Channel</a></li>
+            <li><a class="grey-text text-lighten-3">Watch Channels</a></li>
+            <li><a class="grey-text text-lighten-3" >Delete Channel</a></li>
+          </ul>)}
         </div>
       </div>
     </div>

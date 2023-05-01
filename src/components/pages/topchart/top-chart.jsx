@@ -12,7 +12,7 @@ function Topchart() {
   const [api, setApi] = useState([]);
 
   const getData = async () => {      
-    const response = await fetch("http://localhost:5000/Channels")
+    const response = await fetch(process.env.REACT_APP_BACKEND_URL+'/Channels')
     const json = await response.json()
     setApi(json)
     setLoadingapi(false)  
@@ -39,11 +39,11 @@ function Topchart() {
       { 
       loadingapi ? (<img alt="" style={{ marginLeft: "30%"}} src="loading.gif"></img> ) : (
       <Table striped bordered hover variant="dark">
-          <thead><tr><th>ID</th><th>CHANNEL TITLE</th><th>CHANNEL DESCRIPTION</th><th>DATE ADDED</th></tr></thead>
+          <thead><tr><th>CHANNEL TITLE</th><th>CHANNEL DESCRIPTION</th><th>DATE ADDED</th></tr></thead>
           <tbody>
           {api.map((item) => {
             return <tr>
-              <td>{item._id}</td><td>{item.title}</td><td>{item.text}</td><td>{item.date}</td>
+              <td>{item.title}</td><td>{item.text}</td><td>{item.date.toString().split('T').join(' ')}</td>
             </tr>
           })}
             </tbody>
