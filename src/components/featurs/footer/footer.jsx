@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./footer.css";
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaPhoneAlt} from 'react-icons/fa';
 import { useContext } from 'react';
