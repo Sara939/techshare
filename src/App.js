@@ -17,7 +17,7 @@ function App() {
   return (
 
     <UserContext.Provider value={{user}}>
-      <Router basename={" "}>
+      <Router >
         {loading ? <Imges className={"imges"} url={"loading.gif"} height={20} width={100}/>: <HomeNav/>}
         <Routing/> 
         <Footer/>
