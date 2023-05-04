@@ -1,6 +1,6 @@
 import './App.css';
 
-import {HashRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import Footer from "./components/featurs/footer/footer.jsx";
 import Routing from './router/routing/routing';
 import { auth, UserContext} from './context/usercontext';
@@ -17,7 +17,7 @@ function App() {
   return (
 
     <UserContext.Provider value={{user}}>
-      <Router>
+      <Router basename={" "}>
         {loading ? <Imges className={"imges"} url={"loading.gif"} height={20} width={100}/>: <HomeNav/>}
         <Routing/> 
         <Footer/>
