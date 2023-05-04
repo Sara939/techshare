@@ -14,11 +14,10 @@ function App() {
 
   const [user, loading]= useAuthState(auth);
  
-
   return (
 
     <UserContext.Provider value={{user}}>
-      <Router>
+      <Router >
         {loading ? <Imges className={"imges"} url={"loading.gif"} height={20} width={100}/>: <HomeNav/>}
         <Routing/> 
         <Footer/>
