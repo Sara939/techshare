@@ -14,7 +14,6 @@ function App() {
 
   const [user, loading]= useAuthState(auth);
  
-
   return (
 
     <UserContext.Provider value={{user}}>
