@@ -21,7 +21,6 @@ function App() {
       <HomeNav/>
         {/* {loading ? <Imges className={"imges"} url={"loading.gif"} height={100} width={100}/>: <HomeNav/>} */}
         <Routing/> 
-        jjjjjjjjjjjjj
         <Footer/>
       </Router>
     </UserContext.Provider>

@@ -17,7 +17,7 @@ function Home() {
         <Text/>  
         <Imges className={"imges"}
         url={"pexels-helena-lopes-933964.jpg"}
-        width={1485} height={650}/>
+         width={"100%"} height={650}/>
       </div>
     </>
   );
