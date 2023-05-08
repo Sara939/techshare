@@ -18,7 +18,8 @@ function App() {
 
     <UserContext.Provider value={{user}}>
       <Router >
-        {loading ? <Imges className={"imges"} url={"loading.gif"} height={20} width={100}/>: <HomeNav/>}
+      <HomeNav/>
+        {/* {loading ? <Imges className={"imges"} url={"loading.gif"} height={100} width={100}/>: <HomeNav/>} */}
         <Routing/> 
         <Footer/>
       </Router>
